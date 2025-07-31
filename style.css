@@ -1,0 +1,95 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fce7ff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#modeToggle {
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.signature {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .btn-primary {
+  background-color: #7b26fb;
+  border: none;
+}
+
+.dark-mode .btn-light {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body.dark-mode footer {
+  color: #ffffff;
+}
+
+#certificateImage {
+  border-radius: 25px;
+  max-width: 100%;
+  height: auto;
+}
+
+#downloadLight,
+#downloadDark {
+  background-color: #7b26fb;
+  border-radius: 25px;
+  padding: 10px 17px;
+  border: none;
+  color: #fff;
+}
+
+footer {
+  width: 90%;
+  margin: 50px auto 20px auto;
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
